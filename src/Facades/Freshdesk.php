@@ -6,11 +6,11 @@
  * Time: 2:00 PM
  */
 
-namespace Mpclarkson\Laravel\Freshdesk;
+namespace Mpclarkson\Laravel\Freshdesk\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class FreshdeskFacade extends Facade
+class Freshdesk extends Facade
 {
     const VERSION = '0.2.0';
     /**

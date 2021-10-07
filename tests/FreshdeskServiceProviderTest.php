@@ -3,7 +3,7 @@
 namespace Mpclarkson\Laravel\Freshdesk\Test;
 
 use Illuminate\Support\Facades\App;
-use Mpclarkson\Laravel\Freshdesk\FreshdeskFacade as Freshdesk;
+use Mpclarkson\Laravel\Freshdesk\Freshdesk as Freshdesk;
 use Mpclarkson\Laravel\Freshdesk\FreshdeskServiceProvider;
 use Illuminate\Container\Container;
 

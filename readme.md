@@ -1,4 +1,4 @@
-# Freshdesk Service Provider for Laravel 5
+# Freshdesk Service Provider for Laravel 6+
 
 [![Build Status](https://travis-ci.org/mpclarkson/freshdesk-laravel.svg?branch=master)](https://travis-ci.org/mpclarkson/freshdesk-laravel)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpclarkson/freshdesk-laravel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mpclarkson/freshdesk-laravel/?branch=master)
@@ -10,41 +10,18 @@ This is a service provider for interacting with the Freshdesk API v2 via the
 
 ## Installation
 
-To add this bundle to your app, use [Composer](https://getcomposer.org).
-
-Add `mpclarkson/freshdesk-laravel` to your **composer.json** file:
-
-```json
-{
-    "require": {
-        "mpclarkson/freshdesk-laravel": "dev-master"
-    }
-}
-```
-
-Then run:
+Run:
  
  ```sh
- composer update
+ composer require hasfoug/freshdesk-laravel
  ```
-
-You must then register the provider in your application.
-
-Register the provider in the `providers` key in your `config/app.php`:
-
-```php
-    'providers' => array(
-        // ...
-        Mpclarkson\Laravel\Freshdesk\FreshdeskServiceProvider::class,
-    )
-```
 
 Then add the Freshdesk facade alias in the `aliases` key in your `config/app.php`:
 
 ```php
     'aliases' => array(
         // ...
-        'Freshdesk' => Mpclarkson\Laravel\Freshdesk\FreshdeskFacade::class,
+        'Freshdesk' => Mpclarkson\Laravel\Freshdesk\Freshdesk::class,
     )
 ```
 

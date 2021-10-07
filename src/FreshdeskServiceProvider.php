@@ -15,14 +15,6 @@ class FreshdeskServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $source = dirname(__DIR__).'/src/config/freshdesk.php';
-
-        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('freshdesk.php')]);
-        } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('freshdesk');
-        }
-        $this->mergeConfigFrom($source, 'freshdesk');
     }
 
     /**
@@ -32,20 +24,18 @@ class FreshdeskServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $source = dirname(__DIR__).'/src/config/freshdesk.php';
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([$source => config_path('freshdesk.php')]);
+        }
+
+        $this->mergeConfigFrom($source, 'freshdesk');
+
         $this->app->singleton('freshdesk', function ($app) {
             $config = $app->make('config')->get('freshdesk');
             return new Api($config['api_key'], $config['domain']);
         });
         $this->app->alias('freshdesk', Api::class);
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['freshdesk', Api::class];
     }
 }
