@@ -27,7 +27,9 @@ class FreshdeskServiceProvider extends ServiceProvider
         $source = dirname(__DIR__).'/src/config/freshdesk.php';
 
         if ($this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('freshdesk.php')]);
+            $this->publishes([
+                $source => config_path('freshdesk.php')
+            ], 'config');
         }
 
         $this->mergeConfigFrom($source, 'freshdesk');

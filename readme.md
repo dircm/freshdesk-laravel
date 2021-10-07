@@ -27,22 +27,18 @@ Then add the Freshdesk facade alias in the `aliases` key in your `config/app.php
 
 ## Configuration
 
-
-To customize the configuration file, publish the package configuration using Artisan.
+Set these env variables:
 
 ```sh
-php artisan vendor:publish
+FRESHDESK_API_KEY=
+FRESHDESK_DOMAIN=
 ```
 
-Update the settings in the `app/config/freshdesk.php` file.
+If you need to customize the config - you can publish it by running following command:
 
-```php
-return [
-    'api_key' => 'your_freshdesk_api_key',
-    'domain' => 'your_freshdesk_domain',
-];
+```sh
+php artisan vendor:publish --provider="Mpclarkson\Laravel\Freshdesk\FreshdeskServiceProvider"
 ```
-
 
 ## Accessing the Freshdesk API
 
