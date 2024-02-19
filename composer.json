@@ -6,11 +6,11 @@
     "type": "laravel-package",
     "require": {
         "php": "^7.2|^8.0",
-        "laravel/framework": "^6.0|^7.0|^8.0|^9.0",
+        "laravel/framework": "^6.0|^7.0|^8.0|^9.0|^10.0",
         "hasfoug/freshdesk-php-sdk": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^9.0|^10.0"
     },
     "license": "MIT",
     "authors": [
