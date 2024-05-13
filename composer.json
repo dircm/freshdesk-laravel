@@ -6,7 +6,7 @@
     "type": "laravel-package",
     "require": {
         "php": "^7.2|^8.0",
-        "laravel/framework": "^6.0|^7.0|^8.0|^9.0|^10.0",
+        "laravel/framework": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
         "hasfoug/freshdesk-php-sdk": "dev-master"
     },
     "require-dev": {
